@@ -24,10 +24,10 @@ public class Main {
 		session.beginTransaction();
 		//Save the Model object
 		//session.save(emp);
-		EmployeeTest.readEmployee(session,0);
+		EmployeeTest.readEmployee(session,1);
 		//Commit transaction
 		session.getTransaction().commit();
-		System.out.println("Employee ID="+emp.getId());
+		//System.out.println("Employee ID="+emp.getId());
 		
 		//terminate session factory, otherwise program won't end
 		HibernateUtil.getSessionFactory().close();
