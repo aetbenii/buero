@@ -14,7 +14,7 @@ import org.hibernate.Session;
 public class Main {
     public static void main(String[] args) {
 		Employee emp = new Employee();
-		emp.setName("Pankaj");
+		emp.setName("Benjamin");
 		emp.setRole("CEO");
 		emp.setInsertTime(new Date());
 		
@@ -23,7 +23,8 @@ public class Main {
 		//start transaction
 		session.beginTransaction();
 		//Save the Model object
-		session.save(emp);
+		//session.save(emp);
+		EmployeeTest.readEmployee(session,0);
 		//Commit transaction
 		session.getTransaction().commit();
 		System.out.println("Employee ID="+emp.getId());
