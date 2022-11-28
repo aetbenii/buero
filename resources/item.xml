@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="java_db.Item" table="Items">
+    <class name="java_db.Item" table="ITEMS">
         <id name="id" type="int">
             <column name="ID" />
             <generator class="increment"></generator>
@@ -10,13 +10,13 @@
         <property name="item_id" type="java.lang.String">
             <column name="ITEM_ID" />
         </property>
-        <property name="total" type="double">
-            <column name="TOTAL" />
+        <property name="item_total" type="double">
+            <column name="ITEM_TOTAL" />
         </property>
         <property name="quantity" type="int">
             <column name="QUANTITY" />
         </property>
-        <many-to-one name="cart" class="java_db.Cart">
+        <many-to-one name="cart_id" class="java_db.Cart">
             <column name="cart_id" not-null="true"></column>
         </many-to-one>
     </class>

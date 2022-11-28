@@ -22,7 +22,7 @@
 			Hibernate 4 automatically figure out Dialect from Database Connection Metadata -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 		<!-- mapping file, we can use Bean annotations too --> 
-		<mapping resource="employee.xml" />
+<!--		<mapping resource="employee.xml" />-->
 		<mapping resource="cart.xml" />
 		<mapping resource="item.xml" />
 	</session-factory>

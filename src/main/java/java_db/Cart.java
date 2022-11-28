@@ -7,13 +7,17 @@ public class Cart {
     private int cart_id;
     private double total;
     private String name;
-    private Set<Item> Itemset;
+    private Set<Item> itemSet;
 
     public Cart(int cart_id, double total, String name, Set<Item> itemset) {
         this.cart_id = cart_id;
         this.total = total;
         this.name = name;
-        Itemset = itemset;
+        itemSet = itemset;
+    }
+
+    public Cart() {
+
     }
 
     public int getCart_id() {
@@ -40,11 +44,11 @@ public class Cart {
         this.name = name;
     }
 
-    public Set<Item> getItemset() {
-        return Itemset;
+    public Set<Item> getItemSet() {
+        return itemSet;
     }
 
-    public void setItemset(Set<Item> itemset) {
-        Itemset = itemset;
+    public void setItemSet(Set<Item> itemSet) {
+        this.itemSet = itemSet;
     }
 }

@@ -2,18 +2,18 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="java_db.Cart" table="Cart">
+	<class name="java_db.Cart" table="CART">
         <id name="cart_id" type="int">
             <column name="CART_ID" />
             <generator class="increment"></generator>
         </id>
-        <property name="name" type="java.lang.String">
-            <column name="NAME" />
-        </property>
         <property name="total" type="double">
             <column name="TOTAL" />
         </property>
-        <set name="itemset" table="ITEMS" fetch="select">
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <set name="itemSet" table="ITEMS" fetch="select">
             <key>
                 <column name="cart_id" not-null="true"></column>
             </key>
