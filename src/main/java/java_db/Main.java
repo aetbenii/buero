@@ -42,9 +42,17 @@ public class Main {
 		//start transaction
 		session.beginTransaction();
 		//Save the Model object
-		session.save(cart);
-		session.save(item1);
-		session.save(item2);
+//		session.save(cart);
+//		session.save(item1);
+//		session.save(item2);
+
+		//updates machen
+		Item item = (Item) session.load(java_db.Item.class,1 );
+		item.setItem_id("Dudelsack");
+		item.setQuantity(1);
+		item.setItem_total(255);
+
+		session.update(item);
 
 		//session.save(emp);
 		//EmployeeTest.readEmployee(session,1);
